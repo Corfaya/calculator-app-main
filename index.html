@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    } -->
+  </style>
+</head>
+
+<body class="flex">
+
+  <main>
+    <div id="top-calculator">
+
+      <div id="calc-title" class="flex">
+        <h1 id="calc-name">calc</h1>
+      </div>
+      <div id="theme" class="flex">
+        <div id="name-container">
+          <h2 id="theme-name">THEME</h2>
+        </div>
+        <div id="theme-bar" class="flex">
+          <div id="toggle" class="flex">
+            <label id="first"> 1</label>
+            <label id="second">2</label>
+            <label id="third">3</label>
+          </div>
+          <div id="toggle-bar" class="flex">
+            <input type="radio" name="theme" id="input-theme1">
+            <input type="radio" name="theme" id="input-theme2">
+            <input type="radio" name="theme" id="input-theme3">
+          </div>
+        </div>
+      </div>
+
+      <div id="display" class="flex">
+        <div class="user-input">0</div>
+      </div>
+    </div>
+
+    <div id="btn-pad">
+      <div class="btn flex" id="seven"><button class="number" value="7">7</button></div>
+      <div class="btn flex" id="eight"><button class="number" value="8">8</button></div>
+      <div class="btn flex" id="nine"><button class="number" value="9">9</button></div>
+      <div class="btn flex" id="del"><button class="dark delete" value="del">DEL</button></div>
+      <div class="btn flex" id="four"><button class="number" value="4">4</button></div>
+      <div class="btn flex" id="five"><button class="number" value="5">5</button></div>
+      <div class="btn flex" id="six"><button class="number" value="6">6</button></div>
+      <div class="btn flex" id="addition"><button class="number" value="+">+</button></div>
+      <div class="btn flex" id="one"><button class="number" value="1">1</button></div>
+      <div class="btn flex" id="two"><button class="number" value="2">2</button></div>
+      <div class="btn flex" id="three"><button class="number" value="3">3</button></div>
+      <div class="btn flex" id="subtraction"><button class="number" value="-">-</button></div>
+      <div class="btn flex" id="point"><button class="number" value=".">.</button></div>
+      <div class="btn flex" id="zero"><button class="number" value="0">0</button></div>
+      <div class="btn flex" id="division"><button class="number" value="/">/</button></div>
+      <div class="btn flex" id="multiplication"><button class="number" value="*">x</button></div>
+      <div class="btn flex" id="reset"><button class="dark reset" value="reset">RESET</button></div>
+      <div class="btn flex" id="equal"><button class="red equal" value="=">=</button></div>
+    </div>
+  </main>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
