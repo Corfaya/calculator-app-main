@@ -23,11 +23,12 @@
     --operators-text: hsl(221, 14%, 31%);
     --calc-del-reset-equal-text: hsl(0, 0%, 100%);
 
+    --theme-active: hsl(6, 63%, 80%);
     --font: 'League Spartan', sans-serif;
 
     /* theme2 */
     --main-bg-2: hsl(0, 0%, 90%);
-    --toogle-keypad-bg-2: hsl(0, 5%, 81%);
+    --toggle-keypad-bg-2: hsl(0, 5%, 81%);
     --display-bg-2: hsl(0, 0%, 93%);
 
     --del-res-bg-2: hsl(185, 42%, 37%);
@@ -38,11 +39,12 @@
     --operators-shadow-2: hsl(35, 11%, 61%);
 
     --operators-text-2: hsl(60, 10%, 19%);
-    --calc-del-reset-equal-text-2: hsl(60, 10%, 19%);
+    --calc-del-reset-equal-text-2: hsl(0, 0%, 100%);
+    ;
 
     /* theme3 */
     --main-bg-3: hsl(268, 75%, 9%);
-    --toogle-keypad-display-bg-3: hsl(268, 71%, 12%);
+    --toggle-keypad-display-bg-3: hsl(268, 71%, 12%);
 
     --del-res-bg-3: hsl(281, 89%, 26%);
     --del-res-shadow-3: hsl(285, 91%, 52%);
@@ -131,51 +133,37 @@ label {
 
 #toggle-bar {
     border-radius: 8px;
-    background-color: var(--toggle-keypad-bg);
     min-width: 30px;
-    width: 10px;
-    height: 10px;
+    width: 40px;
+    height: 13px;
     max-height: 100%;
-    justify-content: space-around;
     gap: 1px;
+    justify-content: space-around;
 }
 
-#toggle-bar input {
-    cursor: pointer;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    appearance: none;
-}
-
-input[type=radio] {
-    margin-top: 1.5px;
+#themes {
     width: 100%;
-    height: 10px;
+    height: 100%;
+    outline: none;
+    padding: 1px;
+    border-radius: 80px;
+    -webkit-appearance: none;
+    background: var(--toggle-keypad-bg);
+    padding: 2px;
+    cursor: pointer;
 }
 
-input[type=radio]:first-of-type:checked {
+#themes::-webkit-slider-thumb {
+    appearance: none;
     background-color: var(--equal-bg--theme-toggle);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-input[type=radio]:first-of-type:checked:active {
-    background-color: hsl(6, 91%, 66%);
-}
-
-input[type=radio]:nth-of-type(2):checked {
-    background-color: var(--equal-bg--theme-toggle-2);
-}
-
-input[type=radio]:nth-of-type(2):checked:active {
-    background-color: hsl(25, 86%, 59%);
-}
-
-input[type=radio]:last-of-type:checked {
-    background-color: var(--equal-bg--theme-toggle-3);
-}
-
-input[type=radio]:last-of-type:checked:active {
-    background-color: hsl(176, 100%, 65%);
+#themes::-webkit-slider-thumb:active {
+    background-color: var(--theme-active);
 }
 
 #display {
@@ -188,12 +176,6 @@ input[type=radio]:last-of-type:checked:active {
     align-items: flex-end;
     padding-right: 20px;
     font-size: 1.6rem;
-}
-
-.previous-input {
-    font-size: 0.4rem;
-    color: rgba(255, 255, 255, 0.603);
-    padding-bottom: 5px;
 }
 
 /* Bottom */
@@ -268,4 +250,32 @@ button:active {
 
 .red:active {
     background-color: hsl(6, 91%, 66%);
+}
+
+/* MOBILE */
+@media (max-width: 400px) {
+    main {
+        min-width: 150px;
+        padding: 20px;
+    }
+
+    #calc-name {
+        font-size: 14px;
+    }
+
+    #display {
+        font-size: 1.2rem;
+        padding-right: 10px;
+    }
+
+    .btn {
+        margin: 3.5px;
+        max-width: 100%;
+        min-width: 30px;
+        min-height: 28px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
 }

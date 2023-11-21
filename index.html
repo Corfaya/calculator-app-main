@@ -37,14 +37,15 @@
         </div>
         <div id="theme-bar" class="flex">
           <div id="toggle" class="flex">
-            <label id="first"> 1</label>
-            <label id="second">2</label>
-            <label id="third">3</label>
+            <label>1</label>
+            <label>2</label>
+            <label>3</label>
           </div>
           <div id="toggle-bar" class="flex">
-            <input type="radio" name="theme" id="input-theme1">
-            <input type="radio" name="theme" id="input-theme2">
-            <input type="radio" name="theme" id="input-theme3">
+            <input type="range" name="themes" id="themes" onchange="changeTheme()" min="1" step="1" max="3"
+              value="1">
+            <!-- <input type="radio" name="theme" id="input-theme2">
+            <input type="radio" name="theme" id="input-theme3"> -->
           </div>
         </div>
       </div>
@@ -62,15 +63,15 @@
       <div class="btn flex" id="four"><button class="number" value="4">4</button></div>
       <div class="btn flex" id="five"><button class="number" value="5">5</button></div>
       <div class="btn flex" id="six"><button class="number" value="6">6</button></div>
-      <div class="btn flex" id="addition"><button class="number" value="+">+</button></div>
+      <div class="btn flex" id="addition"><button class="number operation lock" value="+">+</button></div>
       <div class="btn flex" id="one"><button class="number" value="1">1</button></div>
       <div class="btn flex" id="two"><button class="number" value="2">2</button></div>
       <div class="btn flex" id="three"><button class="number" value="3">3</button></div>
-      <div class="btn flex" id="subtraction"><button class="number" value="-">-</button></div>
+      <div class="btn flex" id="subtraction"><button class="number operation lock" value="-">-</button></div>
       <div class="btn flex" id="point"><button class="number" value=".">.</button></div>
       <div class="btn flex" id="zero"><button class="number" value="0">0</button></div>
-      <div class="btn flex" id="division"><button class="number" value="/">/</button></div>
-      <div class="btn flex" id="multiplication"><button class="number" value="*">x</button></div>
+      <div class="btn flex" id="division"><button class="number operation open" value="/">/</button></div>
+      <div class="btn flex" id="multiplication"><button class="number operation open" value="*">x</button></div>
       <div class="btn flex" id="reset"><button class="dark reset" value="reset">RESET</button></div>
       <div class="btn flex" id="equal"><button class="red equal" value="=">=</button></div>
     </div>
