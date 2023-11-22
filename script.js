@@ -7,11 +7,6 @@ var userInput = $(".user-input");
 var isFinished = false;
 var themes = $("#themes");
 
-//PROVA
-var operations = $(".operation");
-var lockOperators = $(".lock");
-var openOperators = $(".open");
-
 // FUNCTIONING
 // 1. Type numbers in sequence on display
 numberBtn.on("click", function (event) {
@@ -63,12 +58,8 @@ equalBtn.on("click", function () {
 // 4. Reset
 resetBtn.on("click", function () {
   userInput.text("0");
+  isFinished = false;
 });
-
-
-// DA VEDERE:
-// NON PERMETTERE DOPPIONE OPERATORI (es: ++, //, *+...)
-// TRASFORMARE PUNTO IN VIRGOLA
 
 // UI
 function changeTheme() {
@@ -139,3 +130,5 @@ function changeTheme() {
       break;
   }
 }
+
+// to do: don't allow duplicate operators

@@ -85,7 +85,7 @@ main {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
     border-radius: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 60px;
     height: 90px;
 }
 
@@ -93,12 +93,13 @@ main {
     align-items: center;
     grid-row: 1 / 2;
     grid-column: span 2;
+    padding-bottom: 25px;
 }
 
 #calc-name {
     padding-left: 5px;
     padding-top: 5px;
-    font-size: 12px;
+    font-size: 1.4rem;
 }
 
 /* Toggle switch */
@@ -109,11 +110,13 @@ main {
     grid-row: 1 / 2;
     grid-column: 3 / 5;
     letter-spacing: 0.7px;
+    padding-bottom: 25px;
 }
 
 #theme-name {
     padding-right: 20px;
-    padding-top: 8px;
+    font-size: 9px;
+    padding-top: 10px;
 }
 
 #theme-bar {
@@ -122,7 +125,7 @@ main {
 
 #toggle {
     justify-content: space-around;
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     padding-bottom: 3px;
 }
 
@@ -134,30 +137,30 @@ label {
 #toggle-bar {
     border-radius: 8px;
     min-width: 30px;
-    width: 40px;
-    height: 13px;
+    width: 50px;
+    height: 18px;
     max-height: 100%;
     gap: 1px;
     justify-content: space-around;
 }
 
 #themes {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     outline: none;
     padding: 1px;
     border-radius: 80px;
     -webkit-appearance: none;
     background: var(--toggle-keypad-bg);
-    padding: 2px;
+    padding: 3px;
     cursor: pointer;
 }
 
 #themes::-webkit-slider-thumb {
     appearance: none;
     background-color: var(--equal-bg--theme-toggle);
-    width: 9px;
-    height: 9px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -167,6 +170,7 @@ label {
 }
 
 #display {
+    padding: 25px;
     border-radius: 5px;
     grid-row: 2 / 3;
     grid-column: span 4;
@@ -174,8 +178,7 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding-right: 20px;
-    font-size: 1.6rem;
+    font-size: 2.3rem;
 }
 
 /* Bottom */
@@ -192,12 +195,12 @@ label {
     cursor: pointer;
     border-radius: 5px;
     background-color: var(--operators-bg);
-    margin: 5px;
+    margin: 8px;
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    min-width: 38px;
-    min-height: 24px;
+    min-width: 80px;
+    min-height: 50px;
 }
 
 #reset {
@@ -211,7 +214,7 @@ label {
 button {
     cursor: pointer;
     font: var(--font);
-    font-size: 1rem;
+    font-size: 1.8rem;
     border: none;
     background-color: var(--operators-bg);
     max-width: 100%;
@@ -230,7 +233,7 @@ button:active {
 
 .dark,
 .red {
-    font-size: 0.6rem;
+    font-size: 1.2rem;
     color: var(--calc-del-reset-equal-text);
 }
 
@@ -259,23 +262,47 @@ button:active {
         padding: 20px;
     }
 
+    #top-calculator {
+        margin-bottom: 35px;
+    }
+
+    #calc-title {
+        padding-bottom: 20px;
+    }
+
+    #theme {
+        padding-bottom: 20px;
+    }
+
     #calc-name {
         font-size: 14px;
     }
 
+    #theme-name {
+        font-size: 7px;
+        padding-right: 16px;
+    }
+ 
+
     #display {
-        font-size: 1.2rem;
-        padding-right: 10px;
+        font-size: 1.6rem;
+        padding-right: 0;
+        padding: 20px;
     }
 
     .btn {
         margin: 3.5px;
         max-width: 100%;
         min-width: 30px;
-        min-height: 28px;
+        min-height: 30px;
     }
 
     button {
-        font-size: 0.9rem;
+        font-size: 1rem;
+    }
+
+    .dark,
+    .red {
+        font-size: 0.7rem;
     }
 }
